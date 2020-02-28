@@ -17,11 +17,11 @@ RUN mkdir /app
 WORKDIR /app
 
 # Add the Package first so the network operations can be cached.
-ADD Package.* /app/
-RUN swift package resolve
+ADD Package.swift /app/
+RUN swift package update
 
 # Build the app
 ADD . /app
 RUN swift build
 
-CMD ./.build/x86_64-unknown-linux/debug/PlusCodeConverter
+#CMD ./.build/x86_64-unknown-linux/debug/PlusCodeConverter
