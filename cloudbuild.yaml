@@ -1,0 +1,15 @@
+steps:
+  # build the container image
+- name: "gcr.io/cloud-builders/docker"
+  args: ["build", "-t", "gcr.io/$PROJECT_ID/quickstart-image", "."]
+  # push container image
+- name: "gcr.io/cloud-builders/docker"
+  args: ["push", "gcr.io/$PROJECT_ID/quickstart-image"]
+  # deploy container image to GKE
+##- name: "gcr.io/cloud-builders/gke-deploy"
+##  args:
+##  - run
+##  - --filename=kubeconfig.yaml
+##  - --image=gcr.io/$PROJECT_ID/quickstart-image
+##  - --location=asia-southeast1-a
+##  - --cluster=midas-test-1-kub
