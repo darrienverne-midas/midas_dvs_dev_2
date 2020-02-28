@@ -24,4 +24,4 @@ RUN swift package update
 ADD . /app
 RUN swift build
 
-#CMD ./.build/x86_64-unknown-linux/debug/PlusCodeConverter
+CMD ./.build/x86_64-unknown-linux/debug/PlusCodeConverter
