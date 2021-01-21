@@ -13,3 +13,5 @@ steps:
 ##  - --image=gcr.io/$PROJECT_ID/pluscode
 ##  - --location=asia-southeast1-a
 ##  - --cluster=midas-test-1-kub
+
+## for testing changes
